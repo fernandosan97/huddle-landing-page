@@ -1,0 +1,151 @@
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-image: url('../images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--violet);
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 45px 70px;
+    margin: 0 auto;
+}
+
+.nav__logo {
+    width: 200px;
+}
+
+main>.container {
+    padding-bottom: 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero__mockup {
+    width: 55%;
+}
+
+.hero__mockup__image {
+    width: 100%;
+}
+
+.hero__texts {
+    width: 44%;
+    padding: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero__texts>h1 {
+    color: #FFF;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.hero__texts>p {
+    color: #FFF;
+    font-weight: 400;
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.button {
+    width: 200px;
+    display: inline-block;
+    background: #FFF;
+    color: var(--violet);
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, .5);
+}
+
+.button:hover {
+    background: var(--soft-magenta);
+    color: #FFF;
+}
+
+
+/* Footer */
+
+footer>.container {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon {
+    text-decoration: none;
+    color: #FFF;
+    display: inline-block;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.icon:hover {
+    border: 1px solid var(--soft-magenta);
+    color: var(--soft-magenta);
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-image: url('../images/bg-mobile.svg');
+    }
+    .hero__mockup {
+        width: 100%;
+        text-align: center;
+    }
+    .hero__mockup__image {
+        width: 100%;
+    }
+    .hero__texts {
+        width: 100%;
+        text-align: center;
+    }
+    footer>.container {
+        justify-content: center;
+        align-items: center;
+    }
+    .hero__texts {
+        padding: 0;
+    }
+    .hero__texts>h1 {
+        font-size: 24px;
+    }
+    .hero__texts>p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 30px;
+    }
+}
